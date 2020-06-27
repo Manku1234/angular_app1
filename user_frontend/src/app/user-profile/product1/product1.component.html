@@ -1,0 +1,17 @@
+<p>
+    {{id}}
+  </p>
+  <div class="product">
+    <div class="row" >
+      <div class="column" *ngFor="let product of products">
+        <div class="content">
+          <img [src]="getSafeUrl(product.ipic)" alt="pic" height="200" width="200">
+          <h3 style="text-align:center;">{{product.iname}}</h3>
+          <p>{{product.idesc}}</p>
+          <h4>Price:{{product.iprice}}/-</h4>
+          <button class="btn btn-success" (click)="onBook(product._id)">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
